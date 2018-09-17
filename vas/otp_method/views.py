@@ -8,9 +8,9 @@ import textwrap
 def detail(request):
     param1 = request.GET.get('otpId')
     param2 = request.GET.get('statusId')
-    param3 = request.GET.get('receipient')
+    param3 = request.GET.get('recipient')
 
-    Otp.objects.create(otpId=param1, statusId=param2, receipient=param3)
+    Otp.objects.create(otpId=param1, statusId=param2, recipient=param3)
 
     return HttpResponse('درخواست با موفقیت ثبت شد.')
 
